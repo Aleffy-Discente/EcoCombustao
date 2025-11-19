@@ -27,14 +27,14 @@ O objetivo principal é promover **consumo consciente**, **educação ambiental*
 
 ---
 
-## 🔬 **Motivação**
+🔬 **Motivação**
 
 A emissão de gases de efeito estufa é um dos grandes desafios atuais. Cada combustível possui uma reação química de combustão específica, liberando diferentes quantidades de CO₂.
 Esse projeto transforma esses dados em um app simples, informativo e acessível.
 
 ---
 
-## 🛠️ **Tecnologias Utilizadas**
+🛠️ **Tecnologias Utilizadas**
 
 * **Kotlin**
 * **Android Studio**
@@ -50,9 +50,9 @@ Esse projeto transforma esses dados em um app simples, informativo e acessível.
 
 ---
 
-## 🌐 **API Utilizada**
+🌐 **API Utilizada**
 
-### **Carbon Interface API (emissões de CO₂)**
+**Carbon Interface API (emissões de CO₂)**
 
 API pública para estimar emissões de veículos com base em:
 
@@ -64,7 +64,7 @@ A API retorna valores em toneladas ou quilogramas de CO₂.
 
 ---
 
-## 🧪 **Como o Cálculo Funciona (Resumo Químico Simplificado)**
+🧪 **Como o Cálculo Funciona (Resumo Químico Simplificado)**
 
 Cada combustível tem uma equação de combustão aproximada, por exemplo:
 
@@ -82,7 +82,7 @@ O app pega esses fatores químicos, combina com os dados da API e exibe:
 
 ---
 
-## 📲 **Funcionalidades**
+📲 **Funcionalidades**
 
 * Interface simples e intuitiva
 * Seleção de combustível
@@ -96,7 +96,7 @@ O app pega esses fatores químicos, combina com os dados da API e exibe:
 
 ---
 
-## 🗂️ **Estrutura do Projeto**
+🗂️ **Estrutura do Projeto**
 
 ```
 app/
@@ -115,7 +115,7 @@ app/
 
 ---
 
-## 🚀 **Como Executar o Projeto**
+🚀 **Como Executar o Projeto**
 
 1. Clone o repositório:
 
@@ -128,30 +128,7 @@ app/
 
 ---
 
-## 📦 **APK**
-
-O arquivo APK está disponível na pasta:
-
-```
-/release/EcoCombustao.apk
-```
-
-Ou via link no GitHub Releases.
-
----
-
-## 🖼️ **Prints do Aplicativo**
-
-*(Adicione aqui depois)*
-
-* Tela inicial
-* Tela de cálculo
-* Tela de resultados
-* Comparação entre combustíveis
-
----
-
-## 🧭 **Navegação**
+🧭 **Navegação**
 
 O aplicativo utiliza:
 
@@ -164,39 +141,10 @@ Fluxo:
 
 ---
 
-## ♿ **Acessibilidade**
-
-* Labels descritivos para leitores de tela
-* Cores contrastantes
-* Navegação por gestos e teclado
-* Ícones com `contentDescription`
-
----
-
-## 👥 **Organização da Equipe**
+👥 **Organização da Equipe**
 
 * Planejamento das telas
 * Divisão das camadas (ViewModel, Repository, UI)
 * Branches por funcionalidade
 * Pull Requests com revisão
 
----
-
-## 🧩 **Desafios Enfrentados**
-
-* Integração com API externa
-* Tratamento de erros e estados Loading/Error
-* Implementação da arquitetura MVVM
-* Garantir responsividade para diversos dispositivos
-* Implementação de acessibilidade
-
----
-
-## 📚 **Licença**
-
-Projeto criado para fins educacionais.
-Licenciado sob MIT.
-
----
-
-Se quiser, posso **adicionar emojis**, deixar o README mais **profissional**, ou adaptar para um **modelo acadêmico**. Quer alguma modificação?
