@@ -2,6 +2,7 @@ EcoCombustão
 
 Aplicativo Android para cálculo e comparação de emissões de diferentes combustíveis.
 
+---
 
 Integrantes da Equipe
 
@@ -9,11 +10,13 @@ Integrantes da Equipe
 * Felipe Bernardo Batista de Macedo
 * Ivauir Silva da Rocha
 
-
+---
 
 Descrição do Projeto
 
 O EcoCombustão é um aplicativo Android desenvolvido para auxiliar usuários a entender o impacto ambiental de diferentes combustíveis a partir da análise de emissões estimadas de CO₂ geradas durante um trajeto.
+
+---
 
 O app permite que o usuário:
 
