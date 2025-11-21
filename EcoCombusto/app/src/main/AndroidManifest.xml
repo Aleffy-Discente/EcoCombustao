@@ -13,6 +13,16 @@
         android:theme="@style/Theme.EcoCombustão"
         tools:targetApi="31">
         <activity
+            android:name=".ui.screens.ResultScreen"
+            android:exported="false"
+            android:label="@string/title_activity_result_screen"
+            android:theme="@style/Theme.EcoCombustão" />
+        <activity
+            android:name=".ui.screens.HomeScreen"
+            android:exported="false"
+            android:label="@string/title_activity_home_screen"
+            android:theme="@style/Theme.EcoCombustão" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
