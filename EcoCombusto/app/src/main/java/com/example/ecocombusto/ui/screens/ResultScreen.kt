@@ -1,4 +1,4 @@
-package com.example.ecocombustao.ui.screens
+package com.example.ecocombusto.ui.screens
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
@@ -19,7 +19,6 @@ fun ResultScreen(
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // carbonKg is kg, show in kg and in grams maybe
         val rounded = String.format("%.2f", carbonKg)
         Text(text = "Emissão estimada: $rounded kg CO₂", style = MaterialTheme.typography.bodyLarge)
 

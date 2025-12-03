@@ -1,4 +1,4 @@
-package com.example.ecocombustao.ui.navigation
+package com.example.ecocombusto.ui.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -12,7 +12,6 @@ import com.example.ecocombustao.ui.screens.ResultScreen
 
 object Routes {
     const val HOME = "home"
-    // passaremos carbonKg como Float (kg)
     const val RESULT = "result/{carbonKg}"
     fun resultRoute(carbonKg: Float) = "result/$carbonKg"
 }

@@ -1,7 +1,7 @@
-package com.example.ecocombustao.data.remote
+package com.example.ecocombusto.data.remote
 
-import com.example.ecocombustao.data.model.CarbonRequest
-import com.example.ecocombustao.data.model.CarbonResponse
+import com.example.ecocombusto.data.model.CarbonRequest
+import com.example.ecocombusto.data.model.CarbonResponse
 import retrofit2.http.Body
 import retrofit2.http.Headers
 import retrofit2.http.POST

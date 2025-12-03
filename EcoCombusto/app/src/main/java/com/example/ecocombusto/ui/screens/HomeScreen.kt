@@ -1,4 +1,4 @@
-package com.example.ecocombustao.ui.screens
+package com.example.ecocombusto.ui.screens
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.*
@@ -12,8 +12,8 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.ecocombustao.ui.viewmodel.CarbonViewModel
-import com.example.ecocombustao.ui.viewmodel.UiEvent
+import com.example.ecocombusto.ui.viewmodel.CarbonViewModel
+import com.example.ecocombusto.ui.viewmodel.UiEvent
 import kotlinx.coroutines.flow.collectLatest
 
 @Composable

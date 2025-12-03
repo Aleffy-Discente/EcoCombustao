@@ -1,5 +1,5 @@
-package com.example.ecocombustao.data.remote
+package com.example.ecocombusto.data.remote
 
 object NetworkConstants {
-    const val BASE_URL = "https://www.carboninterface.com/api/"
+    const val BASE_URL = "https://api-carbon.onrender.com/"
 }
