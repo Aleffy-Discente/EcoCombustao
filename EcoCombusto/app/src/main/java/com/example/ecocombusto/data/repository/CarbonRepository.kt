@@ -1,8 +1,8 @@
-package com.example.ecocombustao.data.repository
+package com.example.ecocombusto.data.repository
 
-import com.example.ecocombustao.data.model.CarbonRequest
-import com.example.ecocombustao.data.model.CarbonResponse
-import com.example.ecocombustao.data.remote.RetrofitClient
+import com.example.ecocombusto.data.model.CarbonRequest
+import com.example.ecocombusto.data.model.CarbonResponse
+import com.example.ecocombusto.data.remote.RetrofitClient
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

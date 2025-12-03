@@ -1,6 +1,6 @@
-package com.example.ecocombustao.data.remote
+package com.example.ecocombusto.data.remote
 
-import com.example.ecocombustao.data.remote.NetworkConstants.BASE_URL
+import com.example.ecocombusto.data.remote.NetworkConstants.BASE_URL
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

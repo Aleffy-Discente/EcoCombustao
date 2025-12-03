@@ -1,4 +1,4 @@
-package com.example.ecocombustao.data.model
+package com.example.ecocombusto.data.model
 
 import com.google.gson.annotations.SerializedName
 
