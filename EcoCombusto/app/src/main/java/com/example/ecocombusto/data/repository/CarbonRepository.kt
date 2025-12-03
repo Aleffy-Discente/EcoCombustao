@@ -9,16 +9,20 @@ import kotlinx.coroutines.withContext
 class CarbonRepository {
 
     suspend fun calculateCarbon(
-        km: Int,
-        vehicleType: String
+        vehicleId: String,
+        distanceKm: Int,
+        userId: String
     ): Result<CarbonResponse> = withContext(Dispatchers.IO) {
         try {
             val request = CarbonRequest(
-                km = km,
-                vehicleModel = vehicleType
+                vehicleId = vehicleId,
+                distanceKm = distanceKm,
+                userId = userId
             )
+
             val response = RetrofitClient.api.getCarbonEstimation(request)
             Result.success(response)
+
         } catch (e: Exception) {
             Result.failure(e)
         }

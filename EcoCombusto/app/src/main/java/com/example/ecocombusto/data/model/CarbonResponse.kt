@@ -13,8 +13,8 @@ data class CarbonData(
 )
 
 data class CarbonAttributes(
-    @SerializedName("carbon_mt") val carbonMt: Double,
-    @SerializedName("vehicle_model_id") val modelId: String,
-    @SerializedName("distance_value") val distance: Int,
-    @SerializedName("distance_unit") val unit: String
+    @SerializedName("carbon_kg") val carbonKg: Double,
+    @SerializedName("litros_consumidos") val litrosConsumidos: Double,
+    @SerializedName("vehicle_id") val vehicleId: String,
+    @SerializedName("distance_km") val distanceKm: Int
 )
