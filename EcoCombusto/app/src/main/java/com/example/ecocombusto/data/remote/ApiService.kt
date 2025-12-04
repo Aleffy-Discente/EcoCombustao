@@ -26,3 +26,33 @@ interface ApiService {
     @GET("stats")
     suspend fun getStats(): StatsResponse
 }
+/*
+{
+  "data": [
+    {
+      "vehicle_id": "car_001",
+      "type": "car",
+      "brand": "Toyota",
+      "model": "Corolla 2.0",
+      "fuel": "gasoline",
+      "consumo_l_km": 0.071
+    },
+    {
+      "vehicle_id": "bike_001",
+      "type": "motorcycle",
+      "brand": "Honda",
+      "model": "CG 160",
+      "fuel": "gasoline",
+      "consumo_l_km": 0.04
+    },
+    {
+      "vehicle_id": "plane_001",
+      "type": "plane",
+      "brand": "Boeing",
+      "model": "737-800",
+      "fuel": "kerosene",
+      "consumo_l_km": 2.9
+    }
+  ]
+}
+ */
