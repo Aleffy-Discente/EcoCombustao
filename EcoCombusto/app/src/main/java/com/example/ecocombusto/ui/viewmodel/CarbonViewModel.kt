@@ -17,20 +17,33 @@ class CarbonViewModel(
     private val _events = Channel<String>()
     val events = _events.receiveAsFlow()
 
-    fun calculateCarbon(km: Int, model: String) {
+    init {
+        loadVehicles()
+    }
+
+    private fun loadVehicles() {
         viewModelScope.launch {
-            _state.value = UiState(loading = true)
+            val response = repository.getVehicles()
+            response.onSuccess {
+                _state.value = _state.value.copy(vehicles = it)
+            }
+        }
+    }
+
+    fun calculateCarbon(km: Int, vehicleId: String) {
+        viewModelScope.launch {
+            _state.value = _state.value.copy(loading = true)
 
             try {
                 val response = repository.calculateCarbon(
-                    vehicleId = model,
+                    vehicleId = vehicleId,
                     distanceKm = km,
-                    userId = ""
+                    userId = "u1039"
                 ).getOrThrow()
 
                 val carbon = response.data.attributes.carbonKg
 
-                _state.value = UiState(
+                _state.value = _state.value.copy(
                     loading = false,
                     result = carbon
                 )
@@ -38,14 +51,12 @@ class CarbonViewModel(
                 _events.send("Cálculo realizado com sucesso")
 
             } catch (e: Exception) {
-                _state.value = UiState(
+                _state.value = _state.value.copy(
                     loading = false,
                     error = e.message
                 )
-
                 _events.send("Erro ao calcular emissões")
             }
         }
     }
-
 }

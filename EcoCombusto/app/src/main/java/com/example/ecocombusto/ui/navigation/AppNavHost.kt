@@ -20,7 +20,11 @@ object Routes {
 fun AppNavHost(modifier: Modifier = Modifier) {
     val navController = rememberNavController()
 
-    NavHost(navController = navController, startDestination = Routes.HOME, modifier = modifier) {
+    NavHost(
+        navController = navController,
+        startDestination = Routes.HOME,
+        modifier = modifier
+    ) {
         composable(Routes.HOME) {
             HomeScreen(
                 onNavigateToResult = { carbonKg ->
@@ -31,12 +35,15 @@ fun AppNavHost(modifier: Modifier = Modifier) {
 
         composable(
             route = Routes.RESULT,
-            arguments = listOf(navArgument("carbonKg") {
-                type = NavType.FloatType
-            })
-        ) { backStackEntry ->
-            val arg = backStackEntry.arguments?.getFloat("carbonKg") ?: 0f
-            ResultScreen(carbonKg = arg, onBack = { navController.popBackStack() })
+            arguments = listOf(
+                navArgument("carbonKg") { type = NavType.FloatType }
+            )
+        ) { entry ->
+            val carbonValue = entry.arguments?.getFloat("carbonKg") ?: 0f
+            ResultScreen(
+                carbonKg = carbonValue,
+                onBack = { navController.popBackStack() }
+            )
         }
     }
 }
