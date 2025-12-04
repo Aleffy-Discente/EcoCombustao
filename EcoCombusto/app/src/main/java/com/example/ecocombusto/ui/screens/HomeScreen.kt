@@ -13,7 +13,6 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.ecocombusto.ui.viewmodel.CarbonViewModel
-import com.example.ecocombusto.ui.viewmodel.UiEvent
 import kotlinx.coroutines.flow.collectLatest
 
 @Composable
@@ -21,21 +20,18 @@ fun HomeScreen(
     vm: CarbonViewModel = viewModel(),
     onNavigateToResult: (Float) -> Unit
 ) {
-    val state by vm.uiState.collectAsState()
+    val state by vm.state.collectAsState()
     val context = LocalContext.current
 
     var km by remember { mutableStateOf("") }
     var model by remember { mutableStateOf("") }
 
     LaunchedEffect(Unit) {
-        vm.events.collectLatest { ev ->
-            when (ev) {
-                is UiEvent.ShowError -> {
-                    Toast.makeText(context, ev.message, Toast.LENGTH_SHORT).show()
-                }
-                is UiEvent.NavigateToResult -> {
-                    onNavigateToResult(ev.carbonKg)
-                }
+        vm.events.collectLatest { message ->
+            Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+
+            if (state.result != null) {
+                onNavigateToResult(state.result!!.toFloat())
             }
         }
     }
@@ -79,7 +75,9 @@ fun HomeScreen(
         Spacer(modifier = Modifier.height(16.dp))
 
         Button(
-            onClick = { vm.calculate(km, model) },
+            onClick = {
+                if (km.isNotEmpty()) vm.calculateCarbon(km.toInt(), model)
+            },
             modifier = Modifier
                 .fillMaxWidth()
                 .semantics { contentDescription = "Botão calcular emissões" }
@@ -89,9 +87,14 @@ fun HomeScreen(
 
         Spacer(modifier = Modifier.height(12.dp))
 
-        if (state.isLoading) {
-            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
-                CircularProgressIndicator(modifier = Modifier.semantics { contentDescription = "Carregando" })
+        if (state.loading) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.Center
+            ) {
+                CircularProgressIndicator(
+                    modifier = Modifier.semantics { contentDescription = "Carregando" }
+                )
             }
         }
     }

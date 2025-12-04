@@ -7,8 +7,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.example.ecocombustao.ui.screens.HomeScreen
-import com.example.ecocombustao.ui.screens.ResultScreen
+import com.example.ecocombusto.ui.screens.HomeScreen
+import com.example.ecocombusto.ui.screens.ResultScreen
 
 object Routes {
     const val HOME = "home"

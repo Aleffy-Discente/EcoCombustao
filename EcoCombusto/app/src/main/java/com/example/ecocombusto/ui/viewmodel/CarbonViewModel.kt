@@ -22,8 +22,13 @@ class CarbonViewModel(
             _state.value = UiState(loading = true)
 
             try {
-                val response = repository.calculateCarbon(km, model)
-                val carbon = response.data.attributes.carbonMt
+                val response = repository.calculateCarbon(
+                    vehicleId = model,
+                    distanceKm = km,
+                    userId = ""
+                ).getOrThrow()
+
+                val carbon = response.data.attributes.carbonKg
 
                 _state.value = UiState(
                     loading = false,
@@ -42,4 +47,5 @@ class CarbonViewModel(
             }
         }
     }
+
 }
